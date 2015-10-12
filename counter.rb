@@ -25,10 +25,13 @@ def count_occurances_in_file(substring, fin, max_buffersize)
   occurances_count
 end
 
-MAX_BUFFERSIZE = 1024 * 1024
 
-substring = ARGV[0]
-file_name = ARGV[1]
-fin = File.open(file_name, 'rb')
+if __FILE__ == $0
+  MAX_BUFFERSIZE = 1024 * 1024
 
-puts count_occurances_in_file(substring, fin, MAX_BUFFERSIZE)
+  substring = ARGV[0]
+  file_name = ARGV[1]
+  fin = File.open(file_name, 'rb')
+
+  puts count_occurances_in_file(substring, fin, MAX_BUFFERSIZE)
+end
