@@ -7,11 +7,8 @@ def count_occurances_in_file(substring, fin, max_buffersize)
     buffer_start = 0
     while true
       location_found = file_buffer.index(substring, buffer_start)
-      if location_found.nil?
-        break
-      else
-        last_location = location_found
-      end
+      break if location_found.nil?
+      last_location = location_found
 
       buffer_start = location_found + substring.length
       occurances_count += 1
