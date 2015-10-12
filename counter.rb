@@ -1,19 +1,3 @@
-def count_occurances_in_buffer(substring, buffer)
-  occurances = 0
-  buffer_start = 0
-
-  # reduce?
-  while true
-    location_found = buffer.index(substring, buffer_start)
-    break if location_found.nil?
-
-    buffer_start = location_found + 1
-    occurances += 1
-  end
-
-  occurances
-end
-
 def count_occurances_in_file(substring, fin, max_buffersize)
   occurances_count = 0
   seek_to = 0
