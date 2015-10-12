@@ -20,4 +20,15 @@ RSpec.describe 'my counting' do
       expect(count_occurances_in_file(search_string, input_string, buffer_size)).to eq 3
     end
   end
+
+  context '' do
+    let(:input_string) { StringIO.new('hehehehehehehe') }
+    let(:search_string) { "hehe" }
+    let(:buffer_size) { 4 }
+
+    it 'produces the correct answer' do
+      expect(count_occurances_in_file(search_string, input_string, buffer_size)).to eq 3
+    end
+
+  end
 end
